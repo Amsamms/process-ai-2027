@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Your Documents Are the Codebase | EGYPES 2027</title>
+<meta name="description" content="How one refinery process engineer turned his own files, drawings, and emails into an AI that thinks like him. EGYPES 2027 companion site." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+  <div class="brand">EGYPES 2027 / Companion Site</div>
+  <nav class="navlinks" aria-label="Sections">
+    <a href="#library">The Library</a>
+    <a href="#mail">The Inbox Memory</a>
+    <a href="#drawing">The Drawing Reader</a>
+    <a href="#recipe">The Recipe</a>
+  </nav>
+</header>
+
+<!-- HERO ===================================================== -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="kicker">A practitioner case study</div>
+    <h1>Your Documents Are the Codebase.</h1>
+    <h2>Agentic AI for the Engineer Who Does Not Code.</h2>
+    <p class="lede">
+      How one refinery process engineer turned his own files, drawings, and emails into an AI that thinks like him.
+    </p>
+    <div class="hero-meta">
+      <span>EGYPES 2027</span>
+      <span class="dot"></span>
+      <span>29 to 31 March 2027</span>
+      <span class="dot"></span>
+      <span>Cairo</span>
+    </div>
+  </div>
+
+  <div class="terminal" aria-label="A short example of the AI answering a question">
+    <div class="terminal-bar">
+      <span class="dot red"></span>
+      <span class="dot yellow"></span>
+      <span class="dot green"></span>
+      <span class="terminal-title">engineer@laptop ~ /refinery-mail</span>
+    </div>
+    <div class="terminal-body" id="terminal-body">
+      <!-- filled by main.js as a 18 second loop -->
+    </div>
+  </div>
+
+  <div class="scroll-hint">
+    <span>scroll</span>
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+      <path d="M12 4v14M5 13l7 7 7-7" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </div>
+</section>
+
+<!-- THE PROBLEM =============================================== -->
+<section class="problem">
+  <div class="container">
+    <h2 class="section-heading">The quiet gap</h2>
+    <p class="big-text">
+      Over the past two years, software developers learned to work alongside AI coding assistants. Their productivity changed shape. Their colleagues felt it.
+    </p>
+    <p class="big-text">
+      Process and petroleum engineers did not.
+    </p>
+    <p class="prose">
+      The reason is not the technology. It is the framing. Every guide, every tutorial, every demo of these tools is wrapped around a source-code repository. A refinery engineer does not have a source-code repository. They have operating manuals, P and IDs, vendor drawings, datasheets, monthly trend reports, and a deep email archive. None of those live in Git, so the engineer concludes the tool is not for them.
+    </p>
+    <p class="prose">
+      This site shows the reframe in practice. One process engineer, working at a refinery in operation, built an AI setup that treats his own documents, drawings, and emails as the codebase. The setup runs on a single free cloud machine. Anyone with no programming background can copy it.
+    </p>
+    <div class="three-pillars">
+      <div class="pillar">
+        <div class="pillar-num">01</div>
+        <div class="pillar-name">The Library</div>
+        <div class="pillar-line">Every manual, drawing, screen, and book the engineer ever consulted, indexed and instantly searchable in plain English.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">02</div>
+        <div class="pillar-name">The Inbox Memory</div>
+        <div class="pillar-line">Twenty years of work emails plus their attachments become one searchable memory the AI can read from.</div>
+      </div>
+      <div class="pillar">
+        <div class="pillar-num">03</div>
+        <div class="pillar-name">The Drawing Reader</div>
+        <div class="pillar-line">The AI looks at scanned P and IDs and vendor drawings, then writes the report or the memo the engineer would have written.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYER 1 LIBRARY =========================================== -->
+<section class="layer" id="library">
+  <div class="layer-left">
+    <div class="layer-tag">LAYER 01</div>
+    <h2 class="layer-title">The Library</h2>
+    <p class="layer-sub">The technical books, manuals, and reference drawings that an engineer would normally open one at a time. The AI reads them all.</p>
+    <p class="prose">
+      Every refinery engineer carries a private bookshelf in their head. Operating manuals from the licensor. The unit's own manuals from before and after revamps. Pages and pages of DCS screen drawings. Years of operator work instructions. A handful of reference books, dog-eared.
+    </p>
+    <p class="prose">
+      Indexing this bookshelf into the AI took a single weekend. The result is a structured library that the AI consults before ever reaching for the open internet. About 6.3 gigabytes, organised into seven topic folders. The full library is sketched on the right.
+    </p>
+    <div class="story">
+      <div class="story-row before">
+        <div class="story-label">Before</div>
+        <div class="story-body">An engineer searching for the recommended chloride injection setpoint at end-of-run conditions opens four large PDFs in sequence, uses Ctrl+F across each, copies fragments into a notepad, and rebuilds the answer from memory. Forty-five minutes on a good day.</div>
+      </div>
+      <div class="story-row after">
+        <div class="story-label">After</div>
+        <div class="story-body">The same engineer types one plain English question. The AI returns the exact page references from the licensor manual, the corresponding section of the unit-specific manual, and a short summary of the difference between the two. Forty seconds.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer-right">
+    <div class="filetree" aria-label="A sketch of the engineer's reference library on the cloud machine">
+      <div class="filetree-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">~/library</span>
+      </div>
+      <pre class="filetree-body">
+<span class="ft-root">library/</span>
+<span class="ft-folder">  01_licensor_manuals/</span>      <span class="ft-meta">10 PDFs, page-indexed</span>
+<span class="ft-folder">  02_unit_manuals_old/</span>      <span class="ft-meta">7 PDFs, page-indexed</span>
+<span class="ft-folder">  03_unit_manuals_new/</span>      <span class="ft-meta">6 PDFs, 1.55 GB, all topics mapped</span>
+<span class="ft-folder">  04_dcs_screens/</span>           <span class="ft-meta">92 graphics, every tag described</span>
+<span class="ft-folder">  05_control_system/</span>        <span class="ft-meta">CCR PLC documentation</span>
+<span class="ft-folder">  06_work_instructions/</span>     <span class="ft-meta">190 operator procedures</span>
+<span class="ft-folder">  07_books/</span>                 <span class="ft-meta">29 reference books, 30 sub-topics</span>
+<span class="ft-stat">
+TOTAL  6.3 GB
+       371 PDFs with searchable text
+       192 Word files
+       21  topic maps for the heaviest manuals
+        92 catalogued control-room screens
+       190 operator work instructions
+</span>
+      </pre>
+    </div>
+    <div class="library-callout">
+      <div class="callout-num">01</div>
+      <div class="callout-text">The AI is told: when an engineer asks something, check this library first. Only fall back to the open web if the library does not have the answer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYER 2 INBOX MEMORY ====================================== -->
+<section class="layer alt" id="mail">
+  <div class="layer-left">
+    <div class="layer-tag">LAYER 02</div>
+    <h2 class="layer-title">The Inbox Memory</h2>
+    <p class="layer-sub">Two decades of work email plus every attachment ever sent, turned into a single memory the AI can search by meaning.</p>
+    <p class="prose">
+      Most knowledge in a refinery does not live in manuals. It lives in email. A vendor's quiet warning four years ago about a heat exchanger. A correspondence chain about catalyst loading that touches twelve people across two companies. A photograph attached to a pump-vibration complaint from 2019.
+    </p>
+    <p class="prose">
+      The engineer mirrors his work inbox into a personal pipeline. Every message and every attachment (PDF, Word, Excel) is converted to searchable text and indexed by meaning, not just by keyword. A daily background job keeps it current. About sixty one gigabytes of mail and attachments, queryable by a single plain English question.
+    </p>
+
+    <div class="case">
+      <div class="case-title">Worked case: a critical heat exchanger</div>
+      <div class="case-q">"Reconstruct the full vendor correspondence on the combined feed exchanger, with all KPI breaches, all open vendor recommendations, and the dates."</div>
+      <div class="case-tline">
+        <div class="case-tcol before">
+          <div class="case-tlabel">The manual way</div>
+          <ul>
+            <li>Open the four work-email folders that contain vendor correspondence.</li>
+            <li>Read 412 messages, filter by sender, date, attachments.</li>
+            <li>Open every attached Excel, every PDF report.</li>
+            <li>Build a spreadsheet of breaches by hand.</li>
+            <li>Write the briefing memo for the vendor meeting.</li>
+          </ul>
+          <div class="case-total">3 working days</div>
+        </div>
+        <div class="case-tcol after">
+          <div class="case-tlabel">With the AI</div>
+          <ul>
+            <li>One plain English question into the AI.</li>
+            <li>The AI reads all 412 messages and their attachments.</li>
+            <li>It returns a 12-row breach table, a chronological event timeline, and the five still-open vendor recommendations.</li>
+            <li>The engineer asks for a Word document. The AI writes it.</li>
+          </ul>
+          <div class="case-total">45 minutes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer-right">
+    <div class="terminal small">
+      <div class="terminal-bar">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+        <span class="terminal-title">/search-mail</span>
+      </div>
+      <pre class="terminal-static">
+$ ask "show all messages about the heat exchanger fouling"
+
+<span class="t-key">match</span>  <span class="t-num">1</span>  <span class="t-score">0.91</span>
+<span class="t-key">  subject</span>  Performance report 2026_04 (post site visit)
+<span class="t-key">  from   </span>  the heat-exchanger fabricator
+<span class="t-key">  date   </span>  2026-05-11
+<span class="t-key">  note   </span>  hydraulic and thermal need follow-up; PNA
+              fouling downgraded; replacement now framed
+              as "most sensible solution"
+
+<span class="t-key">match</span>  <span class="t-num">2</span>  <span class="t-score">0.88</span>
+<span class="t-key">  subject</span>  Site visit minutes of meeting
+<span class="t-key">  from   </span>  vendor regional sales
+<span class="t-key">  date   </span>  2026-04-13
+<span class="t-key">  note   </span>  agenda: follow-up on the exchanger plus
+              new product line (compact heat exchangers)
+
+<span class="t-key">match</span>  <span class="t-num">3</span>  <span class="t-score">0.86</span>
+<span class="t-key">  subject</span>  Recommendations from October 2024
+<span class="t-key">  from   </span>  vendor process specialist
+<span class="t-key">  date   </span>  2024-10-21
+<span class="t-key">  note   </span>  spray-bar back-flush; capital spare bellows;
+              data submission every 6 to 12 months
+</pre>
+    </div>
+    <div class="library-callout">
+      <div class="callout-num">02</div>
+      <div class="callout-text">The AI does not just match words. It matches meaning, so a question about "fouling" finds messages that never used the word "fouling" but talked about pressure-drop trends.</div>
+    </div>
+  </div>
+</section>
+
+<!-- LAYER 3 DRAWING READER ==================================== -->
+<section class="layer" id="drawing">
+  <div class="layer-left">
+    <div class="layer-tag">LAYER 03</div>
+    <h2 class="layer-title">The Drawing Reader</h2>
+    <p class="layer-sub">Attach a scanned P and ID. Ask a question in plain English. Get a structured engineering answer.</p>
+    <p class="prose">
+      Process engineers spend hours on drawings. Looking for relief valves on a vessel. Checking whether a vent line is isolated. Counting the manual valves on a flare header. The new generation of AI can look at the same drawing and answer those questions directly.
+    </p>
+    <p class="prose">
+      To the right is a real vendor P and ID for a refrigeration package attached to a refinery unit. Identifying labels (vendor name, drawing number, unit number, tag numbers) have been removed for this public page. The drawing itself is unchanged.
+    </p>
+
+    <div class="case">
+      <div class="case-title">The conversation</div>
+      <div class="case-q">"Look at the attached P and ID. Tell me, in four bullets, the safety concerns I should review before signing off."</div>
+      <div class="ai-reply">
+        <div class="ai-reply-label">The AI answered in 90 seconds</div>
+        <ol>
+          <li>The receiver vessel carries two pressure relief valves in parallel. Confirm that at least one is online and that the bypass valve between them is car-sealed in the correct position.</li>
+          <li>The vent line from the stabiliser overhead does not show a normally-closed isolation valve before tying into the relief header. Verify against the latest red-line update.</li>
+          <li>The level transmitter on the suction drum has no visible high-high level interlock to trip the downstream pump. Cross-check with the cause-and-effect document.</li>
+          <li>Two heat exchangers are shown with a shared common drain header. Confirm that the cross-routing cannot allow back-flow of one fluid into the other process side during isolation for maintenance.</li>
+        </ol>
+        <div class="ai-reply-footnote">All four points were cross-referenced against API recommended practices and the unit's own work-instruction set. The AI cited the relevant section numbers for each.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="layer-right">
+    <figure class="pid-figure">
+      <div class="pid-wrap">
+        <img src="assets/pid_sanitized.png" alt="A vendor refrigeration P and ID, with all identifying labels removed. Piping and equipment geometry are preserved."/>
+        <div class="pid-anno a1" title="Two parallel relief valves on the receiver vessel">1</div>
+        <div class="pid-anno a2" title="Vent line, isolation valve not visible">2</div>
+        <div class="pid-anno a3" title="Level transmitter without high-high trip">3</div>
+        <div class="pid-anno a4" title="Common drain header on twin exchangers">4</div>
+      </div>
+      <figcaption>A real vendor P and ID, identifying marks removed for this public page. Numbered markers map to the four safety points the AI returned.</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- RECIPE ==================================================== -->
+<section class="recipe" id="recipe">
+  <div class="container">
+    <div class="layer-tag">THE RECIPE</div>
+    <h2 class="section-heading">Five steps to build your own engineer's AI.</h2>
+    <p class="recipe-intro">
+      No programming background needed. Each step is something a working engineer can do in an hour or less.
+    </p>
+
+    <ol class="recipe-steps">
+      <li>
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <div class="step-title">Get a free cloud machine.</div>
+          <p>Sign up for the free tier of any major cloud provider. The cheapest plan is enough. The one this engineer used costs zero per month, forever, and gives twelve gigabytes of memory.</p>
+          <a class="step-link" href="https://www.oracle.com/cloud/free/" target="_blank" rel="noopener">Oracle Always Free</a>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <div class="step-title">Install the AI on it.</div>
+          <p>One command in the terminal. The AI lives on your cloud machine the way a junior engineer would, with permission to read files and run small scripts.</p>
+          <a class="step-link" href="https://docs.claude.com/en/docs/claude-code/overview" target="_blank" rel="noopener">Claude Code documentation</a>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <div class="step-title">Point it at your documents.</div>
+          <p>Upload your manuals, drawings, screens, and work instructions to a single folder on the cloud machine. Tell the AI to organise it. It will write a one-page index that lists everything by topic, by unit, and by date.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">04</div>
+        <div class="step-body">
+          <div class="step-title">Mirror your work email.</div>
+          <p>Set up an automatic forward from your work inbox to a personal address that the AI can read. The AI will index every message and every attachment for you on a daily schedule. No data leaves your control.</p>
+        </div>
+      </li>
+      <li>
+        <div class="step-num">05</div>
+        <div class="step-body">
+          <div class="step-title">Ask your first question.</div>
+          <p>Try: "Look across my library and my mail. Tell me everything we know about the last failure of equipment X. Reply as a one-page memo I can send to my manager." The first answer will surprise you. The second will change how you work.</p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- FOOTER ==================================================== -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Companion site to an EGYPES 2027 abstract.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 29 to 31 March, Cairo.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>
