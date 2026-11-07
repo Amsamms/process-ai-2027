@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>The daily unit check that runs on its own | Case 4 | EGYPES 2027</title>
+<meta name="description" content="Every working day it screens over 12,000 plant data series, updates every open case and sends one mail." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 04</span><span class="case-badge">Daily automation</span><span class="case-date">5 November 2026</span></div>
+    <h1 class="cpage-title">The daily unit check that runs on its own</h1>
+    <p class="case-tagline">Every working day it screens over 12,000 plant data series, updates every open case and sends one mail.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/daily_check.jpg">
+        <source src="../videos/daily_check.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 70 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>Every morning a process engineer is expected to scan several large plant workbooks for anything abnormal and to keep track of every open issue across the area. Done by hand, most numbers are never looked at and slow problems are noticed late.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Starts by itself on a timer once the four plant workbooks of the day are uploaded, and reads its own rules, lessons and memory first.</li><li>Reads every mail the team sent since the last report, and corrects its own records when a colleague points out a wrong fact.</li><li>Screens every data series in the day&#x27;s workbooks (12,470 on 5 November) and flags the unusual ones (942).</li><li>Hands the findings to 10 helper agents in batches, then reads every verdict itself (9 of 728 changed).</li><li>Writes a dated entry in every open case (58), for example the caustic wash tower it has followed since 30 July.</li><li>Checks every number, tag and unit in the mail against the workbooks, then sends one mail to the team and a short summary to my phone.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>One mail per working day, about an hour of work each, with a deep log behind it. On 5 November: 12,470 series screened, 728 findings judged, 58 open cases updated and one new case opened, 312 numbers in the mail checked with 0 errors. The caustic wash case shows the value of memory: the run followed it day by day through a renewal on 23 October, a spent charge on 30 October and the recovery to 2,053 wt-ppm sulfide on 4 November.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>The team reads the mail and decides what to do; the run only proposes. Its findings are screening results from the workbooks, not field checks, and it records its own mistakes (six caught before the mail on 5 November).</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>61 minutes for the 5 November run (10:30 to 11:31 Cairo).</p></div>
+      <div><h3>Guardrails</h3><p>A send guard allows one mail per day, only after the work is finished, and only to the fixed team list. Its rule files are read-only and are put back automatically after every run; it can only propose rule changes.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Write down, in plain words, how a senior engineer checks the units every morning, and keep a memory folder with one file per open case. Run it on a timer, give it a send guard, and read its self-critique at the end of each report to steer it.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="caustic_wash.html">&larr; Why the caustic wash tower kept upsetting</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="burner_pressure.html">Why one heater needs twice the burner pressure &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

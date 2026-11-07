@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A burner pressure calculator in 47 minutes | Case 6 | EGYPES 2027</title>
+<meta name="description" content="Vendor curves read off old scans, checked against the vendor&#x27;s own data, built into a live spreadsheet." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 06</span><span class="case-badge">Calculation</span><span class="case-date">19 October 2026</span></div>
+    <h1 class="cpage-title">A burner pressure calculator in 47 minutes</h1>
+    <p class="case-tagline">Vendor curves read off old scans, checked against the vendor&#x27;s own data, built into a live spreadsheet.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/burner_calculator.jpg">
+        <source src="../videos/burner_calculator.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 72 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>When a burner pressure looks high, the first question is: what should it be, for today&#x27;s gas and today&#x27;s firing? The vendor curves are drawn for one reference gas, some only exist as old scans, and one group of heaters has a single design point. I asked for a spreadsheet that answers the question for six heaters.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Searched the technical database and the work-mail archive and found the burner datasheets, the curves and a 2023 team thread with its workbooks.</li><li>Traced one heater&#x27;s colour curve chart and calibrated the log axes of another heater&#x27;s black and white scan on its gridlines.</li><li>Tested the method before building: from one vendor curve it predicted the vendor&#x27;s other curves within 0.03 barg.</li><li>Built an 11-sheet workbook where every result is a live formula, with a real day of gas analysis and flows as the example.</li><li>Recalculated it, found its own bug (a constant named like a cell address read as 0), fixed it, and matched an independent Python model within 0.0003 barg.</li><li>Wrote down what is weak: one heater group has only a single design point, about 10% uncertain.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>A live spreadsheet: paste the fuel gas analysis, enter burners in service, gas temperature and flow, and it gives the design burner pressure. It also works backwards: at a measured pressure it gives the flow the burners should pass, so a shortfall points to plugged tips, a throttled valve or a meter error. On the licensor&#x27;s own 2025 example it gives 1.27 barg against their 1.23.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>Two inputs are still placeholders (gas temperature on two heater groups), and the AI flagged that the 1 September lab report contradicts itself (its composition and its density give different molecular weights). Those need the plant&#x27;s answers, not the AI&#x27;s guess.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>47 minutes from question to a checked workbook (session times)</p></div>
+      <div><h3>Guardrails</h3><p>Read only on documents and mail; no plant system was touched. The workbook was sent to a colleague only when I asked for it.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Keep the vendor datasheets and curves, even old scans, where the AI can read them. Ask for a live-formula workbook, then ask it to prove the method on the vendor&#x27;s own curves before it builds.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="burner_pressure.html">&larr; Why one heater needs twice the burner pressure</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="lean_amine.html">How little amine can we live with? &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

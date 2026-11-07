@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A flowmeter calculator, built and tested | Case 10 | EGYPES 2027</title>
+<meta name="description" content="A spreadsheet for orifice meter maximum flow, built from one method document and checked 72 ways." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 10</span><span class="case-badge">Calculation</span><span class="case-date">19 to 20 October 2026</span></div>
+    <h1 class="cpage-title">A flowmeter calculator, built and tested</h1>
+    <p class="case-tagline">A spreadsheet for orifice meter maximum flow, built from one method document and checked 72 ways.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/flowmeter.jpg">
+        <source src="../videos/flowmeter.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 68 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>Plant flowmeters (orifice plates and venturis) are set up for design conditions. To trust a reading, or to check that a meter&#x27;s design maximum matches the control system range, the engineer has to redo the orifice calculation. Our old template used older correlations and could not be traced to one method.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Read the licensor&#x27;s orifice method document, zooming into each of 12 equations at high resolution so nothing was misread.</li><li>Wrote an independent Python model of the same method first, to have something to check the spreadsheet against.</li><li>Generated the spreadsheet with no macros: 7 meter types, gas, liquid and steam, with the coefficient and Reynolds number loop solved in 30 hidden passes.</li><li>Filled test copies with 27 cases, recalculated them and compared every result with the Python model: 0 failures.</li><li>Added a status line per meter that names the problem (missing input, out of range, not converged) instead of showing a wrong number.</li><li>On my request, added a second sheet on the ISO 5167 orifice standard, so the two methods can be compared.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>A first tested calculator 13 minutes after the request. On the worked example it gives 6,314.3 Nm3/h against 6,311.5 from the old template, and the ISO 5167 sheet gives 6,291.1 (0.37 % lower). After 6 rounds of changes the checks stood at 36 cases on 2 sheets, 72 checks, 0 failures.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>I found a fault its own tests missed: Excel reported a repair error that LibreOffice did not (an empty drop-down block on one sheet). I also decided the units, inputs and layout, and told it to take the method&#x27;s printed constants as correct where it had flagged them. A colleague and I still review the method choices before real use.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>13 minutes from the request to the first tested version (session times); changes over the next day.</p></div>
+      <div><h3>Guardrails</h3><p>One source for the method, named in the request. Every version was re-tested against the independent model before it was sent, and it went to a colleague for review, not into use.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Give the AI the one method document you trust and say it is the only reference. Ask for an independent model in code plus a spreadsheet, and a script that compares the two on many cases. Then open the file in the program your colleagues really use.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="pump_timeline.html">&larr; A pump problem, from 15 mails to one page</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="mail_archive.html">Finding a 2020 bulletin in 25 years of mail &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
