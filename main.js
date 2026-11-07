@@ -44,8 +44,54 @@
   var REVEAL_PAUSE = 70;   // ms between AI lines that appear together
   var CYCLE_PAUSE = 1200;  // ms before clearing and restarting
 
-  var body = document.getElementById("terminal-body");
-  if (!body) return;
+  var host = document.getElementById("terminal-body");
+  if (!host) return;
+
+  // Layout lock (2026-11-07): an invisible copy of the FINISHED output holds the box at its
+  // final height at any screen width, and the live animation draws on top of it. Without this
+  // the box grew and shrank every cycle and the page below it jumped (bad on phones).
+  var ghost = document.createElement("div");
+  ghost.className = "terminal-ghost";
+  ghost.setAttribute("aria-hidden", "true");
+  var body = document.createElement("div");
+  body.className = "terminal-live";
+  host.innerHTML = "";
+  host.appendChild(ghost);
+  host.appendChild(body);
+  (function renderGhost() {
+    var line = null;
+    SCRIPT.forEach(function (st) {
+      var d;
+      if (st.type === "prompt") {
+        line = document.createElement("div");
+        var ps = document.createElement("span"); ps.className = "prompt"; ps.textContent = st.text;
+        line.appendChild(ps); ghost.appendChild(line);
+      } else if (st.type === "user") {
+        var us = document.createElement("span"); us.className = "user"; us.textContent = st.text + " ";
+        (line || ghost).appendChild(us);
+      } else if (st.type === "ai" || st.type === "meta") {
+        d = document.createElement("div"); d.textContent = st.text; ghost.appendChild(d);
+      } else if (st.type === "kv") {
+        d = document.createElement("div");
+        var k = document.createElement("span"); k.textContent = st.k;
+        var v = document.createElement("span"); v.textContent = "  " + st.v;
+        d.appendChild(k); d.appendChild(v); ghost.appendChild(d);
+      } else if (st.type === "blank") {
+        d = document.createElement("div"); d.innerHTML = "&nbsp;"; ghost.appendChild(d);
+      }
+    });
+  })();
+
+  // Pause the loop while the terminal is off screen (no work, no movement, saves battery).
+  var onScreen = true;
+  if ("IntersectionObserver" in window) {
+    new IntersectionObserver(function (es) { onScreen = es[0].isIntersecting; }).observe(host);
+  }
+  function whileHidden() {
+    return new Promise(function (r) {
+      (function chk() { if (onScreen) r(); else setTimeout(chk, 400); })();
+    });
+  }
 
   function clear() { body.innerHTML = ""; }
 
@@ -193,6 +239,7 @@
       return;
     }
     while (true) {
+      await whileHidden();
       await playCycle();
     }
   }
@@ -207,7 +254,7 @@
         }
       });
     }, { threshold: 0.1 });
-    heroObs.observe(body);
+    heroObs.observe(host);
   } else {
     loopForever();
   }

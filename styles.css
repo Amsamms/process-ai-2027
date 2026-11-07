@@ -201,7 +201,7 @@ a:hover { opacity: 0.8; }
 }
 .terminal-body {
   padding: 18px 18px 22px;
-  min-height: 340px;
+  position: relative;
   color: var(--ink);
   white-space: pre-wrap;
   word-break: break-word;
@@ -212,6 +212,8 @@ a:hover { opacity: 0.8; }
 .terminal-body .key { color: var(--accent); }
 .terminal-body .val { color: var(--ink); }
 .terminal-body .meta { color: var(--ink-low); }
+.terminal-ghost { visibility: hidden; }
+.terminal-live { position: absolute; top: 18px; left: 18px; right: 18px; }
 .terminal-body .caret {
   display: inline-block;
   width: 7px;
@@ -779,3 +781,12 @@ a:hover { opacity: 0.8; }
   .case-nav a { max-width: none; }
   .case-main { padding-top: 84px; }
 }
+
+/* Phones (2026-11-07): smaller hero terminal so lines wrap less and it takes less than a screen. */
+@media (max-width: 600px) {
+  .terminal { font-size: 11px; line-height: 1.5; }
+  .terminal-body { padding: 12px 12px 16px; }
+  .terminal-live { top: 12px; left: 12px; right: 12px; }
+}
+/* The hero terminal wraps its text, so it never needs to scroll; a scrollbar here changed its width mid-loop. */
+.terminal-body#terminal-body { overflow: hidden; }
