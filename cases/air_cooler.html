@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Reviewing a colleague&#x27;s air cooler report | Case 17 | EGYPES 2027</title>
+<meta name="description" content="A first review in 12 minutes, one point that went too far, and the question that put it right." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css?v=20261108" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 17</span><span class="case-badge">Investigation</span><span class="case-date">25 June 2026</span></div>
+    <h1 class="cpage-title">Reviewing a colleague&#x27;s air cooler report</h1>
+    <p class="case-tagline">A first review in 12 minutes, one point that went too far, and the question that put it right.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/air_cooler.jpg">
+        <source src="../videos/air_cooler.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 66 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>A colleague sent our department an assessment of five air coolers cleaned from the outside in June. Three reached their design outlet temperature and two did not. For one gas cooler, the report asked the rotating equipment team to check the fan. Before it went up to my manager, I asked the AI to review it.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Read the report from my mail, with the trend chart of each cooler, and confirmed that cold approach (outlet minus air temperature) is the right measure for an air cooler.</li><li>Checked each claimed gain against its chart: one cooler&#x27;s gain was 20 C in the text and about 16 C on the chart.</li><li>Asked for a frequency or a trigger in place of &quot;regular cleaning&quot;.</li><li>Mailed the review to me and the author 12 minutes after my request, then an HTML version with recommendations and a corrected draft.</li><li>On the gas cooler, first argued that the fan was fine because the temperature drop equalled design. After my question, it withdrew that and showed the effectiveness had fallen from 0.81 to 0.64.</li><li>Listed what would separate the two possible causes: the gas flow against design, the air temperature at the time, and an outlet transmitter.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>The gas cooler dropped the gas by 76 C, the same as design, but against a much bigger driving force: its effectiveness was about 0.64 against 0.81 by design. A healthy cooler would have dropped it by about 95 C, to about 51 C instead of 70. So the fan check in the report was justified.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>I caught the AI&#x27;s mistake. A hotter inlet should give a bigger drop, so an equal drop hides a weaker cooler. The author&#x27;s revised report kept the fan check, and I sent it to my manager as written. Whether the cause is the fan or more gas than design is still open; it needs field data.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>12 minutes from my request to the first review mail; the corrected view came the same morning (mail and note times).</p></div>
+      <div><h3>Guardrails</h3><p>The AI read the report from my mailbox and wrote only to me and the author. The judgement on the report, and what went to my manager, stayed with me.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Forward the report to a mailbox the AI can read and ask for a review against the charts. Then ask it the questions you would ask a junior engineer, and watch whether it changes its mind for a good reason.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="ask_library.html">&larr; Ask the library: what does more C7+ do?</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="excel_database.html">Five monthly Excel files into one database &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

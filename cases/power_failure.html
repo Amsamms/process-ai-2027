@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Checking a power failure report | Case 19 | EGYPES 2027</title>
+<meta name="description" content="A draft report, checked unit by unit against the plant&#x27;s own emergency instructions before it went out." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css?v=20261108" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 19</span><span class="case-badge">Investigation</span><span class="case-date">Spring 2026</span></div>
+    <h1 class="cpage-title">Checking a power failure report</h1>
+    <p class="case-tagline">A draft report, checked unit by unit against the plant&#x27;s own emergency instructions before it went out.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/power_failure.jpg">
+        <source src="../videos/power_failure.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 66 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>After a site-wide power failure, each area writes a report of what happened, unit by unit. The draft for my area came to me. Before it goes further, someone has to check it is complete and that what the operators did matches the plant&#x27;s emergency instructions.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Found the report in my work mail (after I told it the right folder) and turned the Word file into text and a PDF, so it could see the trend charts too.</li><li>Read only my area&#x27;s section: 5 unit sections, each a timeline of events from the trip to the restart.</li><li>Listed the 7 units running in my area and found that 2 of them had no section in the report.</li><li>Read the 6 emergency work instructions for these units in our document library, plus the electrical failure sections of the manuals.</li><li>Compared each timeline with its instruction and listed the steps that the instruction asks for but the report does not mention.</li><li>Gave me a ranked list (must fix, important, nice to have) and saved its method as a checklist for the next power failure.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>Two running units were missing from the report. Steps the instructions ask for were not mentioned, for example bleeding a reactor down to 7 bar(g) if power is not back within one hour, and sending the product to the slop tank. The introduction still carried the date of an older report, and the emergency generator and UPS were not covered.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>I pointed it to the right mail folder and told it the trends were pictures. I read the review, and I decide what goes back to the author and how. A missing line in a report does not mean the step was not done on the day.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>Under 1 hour 20 minutes from my request to the review I accepted (prompt and file times).</p></div>
+      <div><h3>Guardrails</h3><p>Read-only: it read the mail and the document library and wrote only in its own project folder. It did not reply to the author or send anything.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Put your emergency work instructions and manuals in one folder the AI can read. When a report arrives, ask it to check the scope first (is every unit there?) and then each timeline against its own instruction, as a ranked list.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="excel_database.html">&larr; Five monthly Excel files into one database</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="hazard_screen.html">Screening a whole unit for hidden hazards &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-<link rel="stylesheet" href="styles.css?v=20261107" />
+<link rel="stylesheet" href="styles.css?v=20261108" />
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
 </head>
 <body>
@@ -172,7 +172,7 @@ TOTAL  6.3 GB
 
     <div class="case">
       <div class="case-title">Worked case: a critical heat exchanger</div>
-      <div class="case-q">"Reconstruct the full vendor correspondence on the combined feed exchanger, with all KPI breaches, all open vendor recommendations, and the dates."</div>
+      <div class="case-q">"Reconstruct the full vendor correspondence on a critical heat exchanger, with all KPI breaches, all open vendor recommendations, and the dates."</div>
       <div class="case-tline">
         <div class="case-tcol before">
           <div class="case-tlabel">The manual way</div>
@@ -212,25 +212,25 @@ $ ask "show all messages about the heat exchanger fouling"
 
 <span class="t-key">match</span>  <span class="t-num">1</span>  <span class="t-score">0.91</span>
 <span class="t-key">  subject</span>  Performance report 2026_04 (post site visit)
-<span class="t-key">  from   </span>  the heat-exchanger fabricator
+<span class="t-key">  from   </span>  the exchanger vendor
 <span class="t-key">  date   </span>  2026-05-11
-<span class="t-key">  note   </span>  hydraulic and thermal need follow-up; PNA
-              fouling downgraded; replacement now framed
-              as "most sensible solution"
+<span class="t-key">  note   </span>  hydraulic and thermal need follow-up;
+              replacement now framed as the
+              vendor's preferred option
 
 <span class="t-key">match</span>  <span class="t-num">2</span>  <span class="t-score">0.88</span>
 <span class="t-key">  subject</span>  Site visit minutes of meeting
 <span class="t-key">  from   </span>  vendor regional sales
 <span class="t-key">  date   </span>  2026-04-13
-<span class="t-key">  note   </span>  agenda: follow-up on the exchanger plus
-              new product line (compact heat exchangers)
+<span class="t-key">  note   </span>  agenda: follow-up on the exchanger and
+              the vendor's other offers
 
 <span class="t-key">match</span>  <span class="t-num">3</span>  <span class="t-score">0.86</span>
 <span class="t-key">  subject</span>  Recommendations from October 2024
 <span class="t-key">  from   </span>  vendor process specialist
 <span class="t-key">  date   </span>  2024-10-21
-<span class="t-key">  note   </span>  spray-bar back-flush; capital spare bellows;
-              data submission every 6 to 12 months
+<span class="t-key">  note   </span>  cleaning practice; spare parts;
+              regular data submission to the vendor
 </pre>
     </div>
     <div class="library-callout">
@@ -287,7 +287,7 @@ $ ask "show all messages about the heat exchanger fouling"
 <section class="cases" id="cases">
   <div class="container">
     <div class="layer-tag">THE CASE LIBRARY</div>
-    <h2 class="section-heading"><span class="cases-count">11</span> real jobs, replayed.</h2>
+    <h2 class="section-heading"><span class="cases-count">19</span> real jobs, replayed.</h2>
     <p class="cases-intro">
       Every case below is a real piece of work done by the AI setup from the talk, on real plant files, mail and data.
       Each video replays the real session: what was asked, what the AI did step by step, where it was wrong, and what the engineer still decided.
@@ -371,7 +371,7 @@ $ ask "show all messages about the heat exchanger fouling"
         <div class="case-thumb"><img src="videos/mail_archive.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:06</span></div>
         <div class="case-card-body">
           <div class="case-kicker"><span class="case-num">11</span><span class="case-badge">Everyday tool</span></div>
-          <div class="case-card-title">Finding a 2020 bulletin in 25 years of mail</div>
+          <div class="case-card-title">Finding an old bulletin in twenty years of mail</div>
           <div class="case-card-tag">A keyword archive of 52,677 work mails found the document, the licensor&#x27;s answer and every related mail.</div>
         </div>
       </a>
@@ -381,6 +381,70 @@ $ ask "show all messages about the heat exchanger fouling"
           <div class="case-kicker"><span class="case-num">12</span><span class="case-badge">Everyday tool</span></div>
           <div class="case-card-title">Ask the AI from any WhatsApp chat</div>
           <div class="case-card-tag">I typed one line on my phone; 13 minutes later the PDF was in the chat, checked against the source.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/lab_revision.html">
+        <div class="case-thumb"><img src="videos/lab_revision.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:08</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">13</span><span class="case-badge">Investigation</span></div>
+          <div class="case-card-title">What the lab wanted to cut, against the manual</div>
+          <div class="case-card-tag">12 agreed sampling changes checked against the manuals and the mail record. One 21x cut was labelled 3x.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/stock_review.html">
+        <div class="case-thumb"><img src="videos/stock_review.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:10</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">14</span><span class="case-badge">Investigation</span></div>
+          <div class="case-card-title">A stock report, checked against the warehouse</div>
+          <div class="case-card-tag">37,000 kg in February, 125 kg in August. A monthly status report checked against manuals, mail and stock sheets.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/cooling_water.html">
+        <div class="case-thumb"><img src="videos/cooling_water.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:08</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">15</span><span class="case-badge">Planning</span></div>
+          <div class="case-card-title">Cooling water cut by a third: what must stop?</div>
+          <div class="case-card-tag">Circulation fell to 7,500 m3/h. The AI read the design files, found it was not just a pump, and timed the tanks.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/ask_library.html">
+        <div class="case-thumb"><img src="videos/ask_library.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:06</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">16</span><span class="case-badge">Everyday tool</span></div>
+          <div class="case-card-title">Ask the library: what does more C7+ do?</div>
+          <div class="case-card-tag">One plain question. Four helpers searched the manuals and books: five effects, each with its source page.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/air_cooler.html">
+        <div class="case-thumb"><img src="videos/air_cooler.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:06</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">17</span><span class="case-badge">Investigation</span></div>
+          <div class="case-card-title">Reviewing a colleague&#x27;s air cooler report</div>
+          <div class="case-card-tag">A first review in 12 minutes, one point that went too far, and the question that put it right.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/excel_database.html">
+        <div class="case-thumb"><img src="videos/excel_database.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:10</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">18</span><span class="case-badge">Everyday tool</span></div>
+          <div class="case-card-title">Five monthly Excel files into one database</div>
+          <div class="case-card-tag">Every formula rewritten, 132 days moved, and one day replayed until 7,000 of 7,000 values matched.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/power_failure.html">
+        <div class="case-thumb"><img src="videos/power_failure.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:06</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">19</span><span class="case-badge">Investigation</span></div>
+          <div class="case-card-title">Checking a power failure report</div>
+          <div class="case-card-tag">A draft report, checked unit by unit against the plant&#x27;s own emergency instructions before it went out.</div>
+        </div>
+      </a>
+      <a class="case-card" href="cases/hazard_screen.html">
+        <div class="case-thumb"><img src="videos/hazard_screen.jpg" alt="" loading="lazy" /><span class="case-play" aria-hidden="true">&#9654;</span><span class="case-len">1:10</span></div>
+        <div class="case-card-body">
+          <div class="case-kicker"><span class="case-num">20</span><span class="case-badge">Investigation</span></div>
+          <div class="case-card-title">Screening a whole unit for hidden hazards</div>
+          <div class="case-card-tag">The manual, almost 3 years of plant data, the unit log and old mail: 36 places to look first, double-checked.</div>
         </div>
       </a>
       <!-- CASES:END -->
@@ -453,6 +517,6 @@ $ ask "show all messages about the heat exchanger fouling"
   </div>
 </footer>
 
-<script src="main.js?v=20261107"></script>
+<script src="main.js?v=20261108"></script>
 </body>
 </html>

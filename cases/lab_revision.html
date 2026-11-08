@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>What the lab wanted to cut, against the manual | Case 13 | EGYPES 2027</title>
+<meta name="description" content="12 agreed sampling changes checked against the manuals and the mail record. One 21x cut was labelled 3x." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css?v=20261108" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 13</span><span class="case-badge">Investigation</span><span class="case-date">9 September 2026</span></div>
+    <h1 class="cpage-title">What the lab wanted to cut, against the manual</h1>
+    <p class="case-tagline">12 agreed sampling changes checked against the manuals and the mail record. One 21x cut was labelled 3x.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/lab_revision.jpg">
+        <source src="../videos/lab_revision.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 68 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>Every year the lab and operations agree which routine samples to cut or change. This year the agreed changes came to me in 3 mails: a 12-row table with a &#x27;manual&#x27; column, the official minutes and one sample sheet. I asked the AI to check every row against the manuals and against the mail record, because I remembered some routines were added for a technical reason and are in no manual.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Found exactly 3 mails (not 4) in the work-mail archive and pulled their attachments.</li><li>Noticed that the summary table and the lab&#x27;s official minutes are two different documents that disagree on several points.</li><li>Found that two documents are both called &#x27;the manual&#x27;: the original sampling table and the later revamp specifications, and worked out which one governs each stream.</li><li>Read 33 manual sheets as page images, because the scanned text of these tables is unreliable for numbers.</li><li>Checked all 12 rows: 8 &#x27;manual&#x27; cells were right and 4 were wrong.</li><li>Searched 49,753 archived mails oldest first and found where the extra routines came from: an old amine supplier analysis and a request from our own technical team last cycle.</li><li>Found a licensor memo of April 2026 that sets a limit on HCl in the make-up hydrogen, while the minutes delete the HCl test.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>4 of the 12 &#x27;manual&#x27; cells were wrong. The worst one: on one off gas stream the table said the manual asks for H2S 3 times a week, but the manual asks 3 times a day, so the agreed once a week is a 21x cut labelled as a 3x cut. The review suggested accepting 6 rows (3 of them with the true baseline written into the minutes), rejecting 3, and keeping the daily HCl test.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>I remembered that some routines had a technical origin and pointed the AI at the whole archive. One source, a later licensor specification for a sulfur test on LPG, was still to be retrieved. What goes back to the lab is my decision; nothing was sent outside my own mailbox.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>The review reached my inbox at 08:08 UTC on 9 September, the morning after the 3 mails (file and mail times). The session&#x27;s start time was not kept.</p></div>
+      <div><h3>Guardrails</h3><p>Read-only access to the manuals and the mail archive. The review went only to my own work mailbox, never to the lab or the team.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Keep your manuals and an archive of your work mail where the AI can read them. Paste the proposed changes and ask it to check each row against the manual pages and to search the mail, oldest first, for where each extra routine came from.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="whatsapp_bot.html">&larr; Ask the AI from any WhatsApp chat</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="stock_review.html">A stock report, checked against the warehouse &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

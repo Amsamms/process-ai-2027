@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>A stock report, checked against the warehouse | Case 14 | EGYPES 2027</title>
+<meta name="description" content="37,000 kg in February, 125 kg in August. A monthly status report checked against manuals, mail and stock sheets." />
+<meta name="theme-color" content="#0c1626" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../styles.css?v=20261108" />
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230c1626'/%3E%3Ctext x='32' y='44' font-family='monospace' font-size='32' fill='%23f4a04a' text-anchor='middle' font-weight='700'%3E%3E_%3C/text%3E%3C/svg%3E" />
+</head>
+<body class="case-page">
+<header class="topbar">
+  <a class="brand" href="../index.html">EGYPES 2027 / Companion Site</a>
+  <nav class="navlinks" aria-label="Sections"><a href="../index.html#cases">All cases</a></nav>
+</header>
+<main class="case-main">
+  <div class="case-container">
+    <div class="case-kicker"><span class="case-num">Case 14</span><span class="case-badge">Investigation</span><span class="case-date">9 September 2026</span></div>
+    <h1 class="cpage-title">A stock report, checked against the warehouse</h1>
+    <p class="case-tagline">37,000 kg in February, 125 kg in August. A monthly status report checked against manuals, mail and stock sheets.</p>
+    <figure class="case-video">
+      <video controls playsinline muted preload="metadata" poster="../videos/stock_review.jpg">
+        <source src="../videos/stock_review.mp4" type="video/mp4" />
+      </video>
+      <figcaption>A replay of the real session, about 70 seconds, silent. Pause any time; on a phone, turn it sideways and tap full screen. Names, tags and company details removed.</figcaption>
+    </figure>
+    <section class="case-block"><h2>The problem</h2><p>Every month a status report is issued on the adsorbents, packings and filter media in our units: what is loaded, what is in stock, and when each must be replaced. I asked the AI to check every claim in it against the licensor and design manuals and against the archived work mail, and to send me the review.</p></section>
+    <section class="case-block"><h2>What the AI did</h2><ol class="case-steps"><li>Read both sheets of the report and found two dated warehouse stock sheets (February and August 2026) in the mail.</li><li>Checked the quantities against the manuals: the ceramic balls sheet was correct, but a carbon canister quantity was for one canister while two are replaced, and one required quantity sat on the wrong row.</li><li>Found that two manuals disagree on drier life (250 to 300 cycles against 500), and that the report quotes one without saying which.</li><li>Searched the mail record for each open row: the licensor had already answered one point on 17 August, and on another the vendor was waiting on us.</li><li>Corrected its own draft: it was about to call one bed overdue, then found a 2023 replacement report showing the plant replaces it on breakthrough.</li><li>Compared the two warehouse sheets: one adsorbent fell from about 37,000 kg to 125 kg, one lot was counted for two vessels, and 6,460 kg was counted as available despite a 3-year shelf life warning.</li></ol></section>
+    <section class="case-block result"><h2>The result</h2><p>A 13-point review memo with manual pages and mails cited, sent only to me. Besides the stock collapse and the double count, it found 11 rows with zero stock and 7 replacement dates already in the past. When I sent my own review, 6 of my 8 red cells were also in its memo; it had missed 2, and one of my cells it could not explain.</p></section>
+    <section class="case-block"><h2>What the engineer still did</h2><p>I did my own review the same morning: 8 cells marked in red and a one-line mail, and that is what went to the team, not the AI&#x27;s memo. The AI saved the lesson: for a workbook, mark the cells and keep the prose short.</p></section>
+    <div class="case-facts">
+      <div><h3>Time taken</h3><p>Not recorded exactly; the session transcript was not kept. The AI&#x27;s review reached my inbox at 09:18 UTC on 9 September, and my own went to the team at 10:03.</p></div>
+      <div><h3>Guardrails</h3><p>Read-only access to the manuals and the mail archive. The review went to my own mailbox only, as a reply on the thread, so I could decide what to send.</p></div>
+    </div>
+    <section class="case-block copy"><h2>Copy it</h2><p>Give the AI the report, the manuals and access to your mail archive, and ask it to find the latest stock sheets itself. Ask it to compare two dated stock sheets: that is where double counts and used-up stock show. Ask for the answer as marked cells, not a long memo.</p></section>
+    <nav class="case-nav"><a class="case-nav-prev" href="lab_revision.html">&larr; What the lab wanted to cut, against the manual</a><a class="case-nav-all" href="../index.html#cases">All cases</a><a class="case-nav-next" href="cooling_water.html">Cooling water cut by a third: what must stop? &rarr;</a></nav>
+  </div>
+</main>
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-left">
+      <div class="footer-title">Your Documents Are the Codebase.</div>
+      <div class="footer-sub">Case library of the EGYPES 2027 talk.</div>
+    </div>
+    <div class="footer-right">
+      <a href="https://www.linkedin.com/in/ahmed-sabri-91097955/" target="_blank" rel="noopener">Ahmed Sabri on LinkedIn</a>
+      <span>EGYPES 2027, 30 March to 1 April, Cairo.</span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
